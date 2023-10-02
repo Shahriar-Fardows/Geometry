@@ -4,10 +4,136 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Geometry</title>
+    <!-- tailwindcss and daisyui link  -->
+    
+<link href="https://cdn.jsdelivr.net/npm/daisyui@3.8.2/dist/full.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+
+
 </head>
 <body>
-    <h1>hi 
-        
-    </h1>
+    <main class=" m-14">
+        <div class="flex bg-cyan-200 p-[18px]	 justify-between	">
+            <div>
+                <h1>Interactive</h1>
+                <p>Geometry Genius</p>
+            </div>
+            <button class="btn btn-info">Blog</button>
+
+        </div>
+       <section class="flex my-[50px]  justify-between">
+        <section class="grid gap-16 grid-cols-1 lg:grid-cols-3 lg:grid-rows-3">
+            <!-- first card  -->
+            <div class="card w-96 bg-base-100 shadow-xl">
+                <figure><img src="./images/triangle.png" alt="Shoes" /></figure>
+                <div class="card-body items-center ">
+                  <h2 id="tri" class="card-title">Triangle!</h2>
+                  <p>Area (A) =0.5 x b x h</p>
+                  <div>
+                    <input id="B" type="text" placeholder="b" class="input input-bordered input-xs w-[74px] max-w-xs" /> <label for="CM">cm</label> 
+                    <input id="H" type="text" placeholder="h" class="input input-bordered input-xs w-[74px] max-w-xs" /> <label for="CM">cm</label> 
+                  </div><br>
+                  <div>Triangle : <span id="ansT">00</span>cm<sup>1</sup></div>
+                  <br>
+
+                  <div class="card-actions justify-center">
+                    <button onclick="getAnsT()" class="btn bg-cyan-400 text-white px-28">Culculatet</button>
+                  </div>
+                </div>
+              </div>
+            <!-- 2nd  card  -->
+            <div class="card w-96 bg-base-100 shadow-xl">
+                <figure><img src="./images/rectangle.png" alt="Shoes" /></figure>
+                <div class="card-body items-center ">
+                    <h2 id="rec" class="card-title">Rectangle!</h2>
+                    <p>Area (A) =w x l</p>
+                    <div>
+                      <input id="w" type="text" placeholder="w" class="input input-bordered input-xs w-[74px] max-w-xs" /> <label for="CM">cm</label> 
+                      <input id="l" type="text" placeholder="l" class="input input-bordered input-xs w-[74px] max-w-xs" /> <label for="CM">cm</label> 
+                    </div><br> <div>Rectangle : <span id="ansRE">00</span>cm<sup>1</sup></div><br>
+  
+                    <div class="card-actions justify-center">
+                      <button onclick="getAnsR()" class="btn bg-cyan-400 text-white	 px-28">Culculatet</button>
+                    </div>
+                  </div>
+              </div>
+            <!--3rd card  -->
+            <div class="card w-96 bg-base-100 shadow-xl">
+                <figure><img src="./images/parallelogram.png" alt="Shoes" /></figure>
+                <div class="card-body items-center ">
+                    <h2 id="par" class="card-title">Parallelogram!</h2>
+                    <p>Area (A) =b x h</p>
+                    <div>
+                      <input id="b" type="text" placeholder="b" class="input input-bordered input-xs w-[74px] max-w-xs" /> <label for="CM">cm</label> 
+                      <input id="h" type="text" placeholder="h" class="input input-bordered input-xs w-[74px] max-w-xs" /> <label for="CM">cm</label> 
+                    </div><br> <div>Parallelogram : <span id="ansP">00</span>cm<sup>1</sup></div><br>
+  
+                    <div class="card-actions justify-center">
+                      <button onclick="getAnsP()" class="btn bg-cyan-400 text-white px-28">Culculatet</button>
+                    </div>
+                  </div>
+              </div>
+            <!--4th card  -->
+            <div class="card w-96 bg-base-100 shadow-xl">
+                <figure><img src="./images/rhombus.png" alt="Shoes" /></figure>
+                <div class="card-body items-center ">
+                    <h2 id="rho" class="card-title">Rhombus!</h2>
+                    <p>Area (A) =0.5 x d<sub>2</sub> x d<sub>2</sub></p>
+                    <div>
+                      <input id="d1" type="text" placeholder="d1" class="input input-bordered input-xs w-[74px] max-w-xs" /> <label for="CM">cm</label> 
+                      <input id="d2" type="text" placeholder="d2" class="input input-bordered input-xs w-[74px] max-w-xs" /> <label for="CM">cm</label> 
+                    </div><br> <div>Rhombus : <span id="ansR">00</span>cm<sup>1</sup></div><br>
+  
+                    <div class="card-actions justify-center">
+                      <button onclick="getAnsRH()" class="btn bg-cyan-400 text-white px-28">Culculatet</button>
+                    </div>
+                  </div>
+              </div>
+            <!--5th card  -->
+            <div class="card w-96 bg-base-100 shadow-xl">
+                <figure><img src="./images/pentagon.png" alt="Shoes" /></figure>
+                <div class="card-body items-center ">
+                    <h2 id="pen" class="card-title">Pentagon!</h2>
+                    <p>Area (A) =0.5 x P x B</p>
+                    <div>
+                      <input id="P" type="text" placeholder="P" class="input input-bordered input-xs w-[74px] max-w-xs" /> <label for="CM">cm</label> 
+                      <input id="bb" type="text" placeholder="b" class="input input-bordered input-xs w-[74px] max-w-xs" /> <label for="CM">cm</label> 
+                    </div><br><div>Pentagon : <span id="ansPE">00</span>cm<sup>1</sup></div><br>
+  
+                    <div class="card-actions justify-center">
+                      <button onclick="getAnsPE()" class="btn bg-cyan-400 text-white px-28">Culculatet</button>
+                    </div>
+                  </div>
+              </div>
+            <!--6th card  -->
+            <div class="card w-96 bg-base-100 shadow-xl">
+                <figure><img src="./images/ellipse.png" alt="Shoes" /></figure>
+                <div class="card-body items-center ">
+                    <h2 id="eli" class="card-title">Ellipse!</h2>
+                    <p>Area (A) = &#960; ab</p>
+                    <div>
+                      <input id="A" type="text" placeholder="a" class="input input-bordered input-xs w-[74px] max-w-xs" /> <label for="CM">cm</label> 
+                      <input id="BB" type="text" placeholder="b" class="input input-bordered input-xs w-[74px] max-w-xs" /> <label for="CM">cm</label> 
+                    </div><br>
+                  <div>  Ellipse : <span id="ansE">00</span>cm<sup>1</sup></div>
+                    <br>
+  
+                    <div class="card-actions justify-center">
+                      <button onclick="getAnsE()" class="btn bg-cyan-400 text-white px-28">Culculatet</button>
+                    </div>
+                  </div>
+              </div>
+        </section>
+         <!-- Area culculator -->
+         <div id="ans" class="w-[400px] h-[445px]  border border-sky-500 text-center">
+            <h1 class=" text-green-600 m-2	 text-lg">Area culculator </h1> <hr><br>
+            <div id="addValue"></div>
+        </div>
+       </section>
+    </main>
+
+
+    <script src="./js/main.js"></script>
+    <script src="./js/exra.js"></script>
 </body>
 </html>
